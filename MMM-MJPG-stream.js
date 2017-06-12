@@ -18,12 +18,6 @@ Module.register('MMM-MJPG-stream', {
         return [];
     },
 
-    getStyles: function() {
-        return [
-            'styles.css'
-        ];
-    },
-
     start: function() {
         Log.info('Starting module ' + this.name);
         this.loaded = false;
@@ -40,9 +34,9 @@ Module.register('MMM-MJPG-stream', {
         content.style.width = this.config.width;
         content.style.height = this.config.height;
         var html = '<html><head><meta http-equiv="refresh" content="' + this.config.refreshInterval + '"><title>Content</title></head><body style="margin:0;padding:0;">';
-        html += '<div style="width:60%;height:100%;background: #0f0 url(\'' + this.config.url1 + '\') no-repeat fixed center top; float:left;';
+        html += '<div style="width:60%;height:100%;background: #333 url(\'' + this.config.url1 + '\') no-repeat fixed center top; float:left;';
         html += ' background-position: 70% -125px; transform: rotate(180deg); background-size: 1280px 960px"></div>';
-        html += '<div style="width:40%;height:100%;background: #f0f url(\'' + this.config.url2 + '\') no-repeat fixed center center; float:right;';
+        html += '<div style="width:40%;height:100%;background: #333 url(\'' + this.config.url2 + '\') no-repeat fixed center center; float:right;';
         html += ' background-position: 101% 100%; background-size: 640px 480px;"></div>';
         html += '</body></html>';
         content.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
