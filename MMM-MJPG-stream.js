@@ -8,12 +8,6 @@ Module.register('MMM-MJPG-stream', {
         refreshInterval: 60 // IMPORTANT: Refresh interval is to be set in seconds, not millisecs.
     },
 
-    getTranslations: function() {
-        return {
-            no: "translations/no.json",
-        }
-    },
-
     getScripts: function() {
         return [];
     },
