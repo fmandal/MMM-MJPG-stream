@@ -31,7 +31,7 @@ Module.register('MMM-MJPG-stream', {
         html += '<div style="width:60%;height:100%;background: #333 url(\'' + this.config.url1 + '\') no-repeat fixed center top; float:left;';
         html += ' background-position: 70% -125px; transform: rotate(180deg); background-size: 1280px 960px"></div>';
         html += '<div style="width:40%;height:100%;background: #333 url(\'' + this.config.url2 + '\') no-repeat fixed center center; float:right;';
-        html += ' background-position: 101% 100%; background-size: 640px 480px;"></div>';
+        html += ' background-position: 101% 100%; background-size: 640px 480px; transform: rotate(180deg);"></div>';
         html += '</body></html>';
         content.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
         return content;
